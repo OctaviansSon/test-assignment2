@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.9.13 on win32)" generated="2025-10-26T10:48:29.976691" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\yasfir\Documents\GitHub\test-assignment2\tests">
+<suite id="s1-s1" name="Buy Product Test" source="C:\Users\yasfir\Documents\GitHub\test-assignment2\tests\buy_product_test.robot">
+<test id="s1-s1-t1" name="Buy Product Successfully" line="6">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-26T10:48:30.309324" level="INFO">Opening browser 'chrome' to base url 'https://www.demoblaze.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-26T10:48:30.309324" elapsed="7.252294"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-26T10:48:37.562615" elapsed="0.691272"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-26T10:48:38.255016" level="INFO">Clicking element '//*[@id="login2"]'.</msg>
+<arg>//*[@id="login2"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-26T10:48:38.255016" elapsed="0.105863"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=loginusername</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-26T10:48:38.360879" elapsed="0.236581"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-26T10:48:38.597460" level="INFO">Typing text 'testuser123' into text field 'id=loginusername'.</msg>
+<arg>id=loginusername</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-26T10:48:38.597460" elapsed="0.148979"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-26T10:48:38.746439" level="INFO">Typing text 'pass123' into text field 'id=loginpassword'.</msg>
+<arg>id=loginpassword</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-26T10:48:38.746439" elapsed="0.158904"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-26T10:48:38.906478" level="INFO">Clicking button '//button[text()="Log in"]'.</msg>
+<arg>//button[text()="Log in"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-26T10:48:38.905343" elapsed="0.183599"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<msg time="2025-10-26T10:48:39.926741" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-10-26T10:48:39.926741" level="FAIL">UnexpectedAlertPresentException: Alert Text: Wrong password.
+Message: unexpected alert open: {Alert text : Wrong password.}
+  (Session info: chrome=141.0.7390.123)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6e26fe8e5+80021]
+	GetHandleVerifier [0x0x7ff6e26fe940+80112]
+	(No symbol) [0x0x7ff6e248060f]
+	(No symbol) [0x0x7ff6e252a131]
+	(No symbol) [0x0x7ff6e2501003]
+	(No symbol) [0x0x7ff6e24c95d1]
+	(No symbol) [0x0x7ff6e24ca3f3]
+	GetHandleVerifier [0x0x7ff6e29bdc7d+2960429]
+	GetHandleVerifier [0x0x7ff6e29b7f3a+2936554]
+	GetHandleVerifier [0x0x7ff6e29d8977+3070247]
+	GetHandleVerifier [0x0x7ff6e27183ce+185214]
+	GetHandleVerifier [0x0x7ff6e271fe1f+216527]
+	GetHandleVerifier [0x0x7ff6e2707b24+117460]
+	GetHandleVerifier [0x0x7ff6e2707cdf+117903]
+	GetHandleVerifier [0x0x7ff6e26edbb8+11112]
+	BaseThreadInitThunk [0x0x7ffc8d58e8d7+23]
+	RtlUserThreadStart [0x0x7ffc8f73bf6c+44]
+</msg>
+<arg>Welcome ${USERNAME}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="FAIL" start="2025-10-26T10:48:39.088942" elapsed="0.843975">UnexpectedAlertPresentException: Alert Text: Wrong password.
+Message: unexpected alert open: {Alert text : Wrong password.}
+  (Session info: chrome=141.0.7390.123)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6e26fe8e5+80021]
+	GetHandleVerifier [0x0x7ff6e26fe940+80112]
+	(No symbol) [0x0x7ff6e248060f]
+	(No symbol) [0x0x7ff6e252a131]
+	(No symbol) [0x0x7ff6e2501003]
+	(No symbol) [0x0x7ff6e24c95d1]
+	(No symbol) [0x0x7ff6e24ca3f3]
+	GetHandleVerifier [0x0x7ff6e29bdc7d+2960429]
+	GetHandleVerifier [0x0x7ff6e29b7f3a+2936554]
+	GetHandleVerifier [0x0x7ff6e29d8977+3070247]
+	GetHandleVerifier [0x0x7ff6e27183ce+185214]
+	GetHandleVerifier [0x0x7ff6e271fe1f+216527]
+	GetHandleVerifier [0x0x7ff6e2707b24+117460]
+	GetHandleVerifier [0x0x7ff6e2707cdf+117903]
+	GetHandleVerifier [0x0x7ff6e26edbb8+11112]
+	BaseThreadInitThunk [0x0x7ffc8d58e8d7+23]
+	RtlUserThreadStart [0x0x7ffc8f73bf6c+44]
+</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>//a[text()="Samsung galaxy s6"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-26T10:48:39.932917" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Add to cart</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-10-26T10:48:39.932917" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>//a[text()="Add to cart"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-26T10:48:39.932917" elapsed="0.001017"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-10-26T10:48:39.933934" elapsed="0.000000"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<arg>accept</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="NOT RUN" start="2025-10-26T10:48:39.933934" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>//*[@id="cartur"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-26T10:48:39.933934" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Place Order</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-10-26T10:48:39.933934" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>//button[text()="Place Order"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-26T10:48:39.934939" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=name</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-26T10:48:39.934939" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=country</arg>
+<arg>Kazakhstan</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-26T10:48:39.934939" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=city</arg>
+<arg>Shymkent</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-26T10:48:39.934939" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=card</arg>
+<arg>4111111111111111</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-26T10:48:39.934939" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=month</arg>
+<arg>10</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-26T10:48:39.935943" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=year</arg>
+<arg>2025</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-26T10:48:39.935943" elapsed="0.000820"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>//button[text()="Purchase"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-26T10:48:39.936763" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Thank you for your purchase!</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-10-26T10:48:39.936763" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>//button[text()="OK"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-26T10:48:39.936763" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-26T10:48:39.937925" elapsed="2.144979"/>
+</kw>
+<status status="FAIL" start="2025-10-26T10:48:30.295903" elapsed="11.787470">UnexpectedAlertPresentException: Alert Text: Wrong password.
+Message: unexpected alert open: {Alert text : Wrong password.}
+  (Session info: chrome=141.0.7390.123)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6e26fe8e5+80021]
+	GetHandleVerifier [0x0x7ff6e26fe940+80112]
+	(No symbol) [0x0x7ff6e248060f]
+	(No symbol) [0x0x7ff6e252a131]
+	(No symbol) [0x0x7ff6e2501003]
+	(No symbol) [0x0x7ff6e24c95d1]
+	(No symbol) [0x0x7ff6e24ca3f3]
+	GetHandleVerifier [0x0x7ff6e29bdc7d+2960429]
+	GetHandleVerifier [0x0x7ff6e29b7f3a+2936554]
+	GetHandleVerifier [0x0x7ff6e29d8977+3070247]
+	GetHandleVerifier [0x0x7ff6e27183ce+185214]
+	GetHandleVerifier [0x0x7ff6e271fe1f+216527]
+	GetHandleVerifier [0x0x7ff6e2707b24+117460]
+	GetHandleVerifier [0x0x7ff6e2707cdf+117903]
+	GetHandleVerifier [0x0x7ff6e26edbb8+11112]
+	BaseThreadInitThunk [0x0x7ffc8d58e8d7+23]
+	RtlUserThreadStart [0x0x7ffc8f73bf6c+44]
+</status>
+</test>
+<status status="FAIL" start="2025-10-26T10:48:30.029552" elapsed="12.055966"/>
+</suite>
+<suite id="s1-s2" name="Login Test" source="C:\Users\yasfir\Documents\GitHub\test-assignment2\tests\login_test.robot">
+<test id="s1-s2-t1" name="Login To DemoBlaze" line="6">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-26T10:48:42.090565" level="INFO">Opening browser 'chrome' to base url 'https://www.demoblaze.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-26T10:48:42.089558" elapsed="2.544342"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-26T10:48:44.633900" elapsed="0.039761"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-26T10:48:44.675668" level="INFO">Clicking element '//*[@id="login2"]'.</msg>
+<arg>//*[@id="login2"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-26T10:48:44.674659" elapsed="0.100944"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=loginusername</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-26T10:48:44.776007" elapsed="0.322871"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-26T10:48:45.100907" level="INFO">Typing text 'testuser123' into text field 'id=loginusername'.</msg>
+<arg>id=loginusername</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-26T10:48:45.098878" elapsed="0.168828"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-26T10:48:45.269090" level="INFO">Typing text 'pass123' into text field 'id=loginpassword'.</msg>
+<arg>id=loginpassword</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-26T10:48:45.267706" elapsed="0.123976"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-26T10:48:45.392827" level="INFO">Clicking button '//button[text()="Log in"]'.</msg>
+<arg>//button[text()="Log in"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-26T10:48:45.392827" elapsed="0.144042"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<msg time="2025-10-26T10:48:46.425045" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-10-26T10:48:46.426047" level="FAIL">UnexpectedAlertPresentException: Alert Text: Wrong password.
+Message: unexpected alert open: {Alert text : Wrong password.}
+  (Session info: chrome=141.0.7390.123)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6e26fe8e5+80021]
+	GetHandleVerifier [0x0x7ff6e26fe940+80112]
+	(No symbol) [0x0x7ff6e248060f]
+	(No symbol) [0x0x7ff6e252a131]
+	(No symbol) [0x0x7ff6e2501003]
+	(No symbol) [0x0x7ff6e24c95d1]
+	(No symbol) [0x0x7ff6e24ca3f3]
+	GetHandleVerifier [0x0x7ff6e29bdc7d+2960429]
+	GetHandleVerifier [0x0x7ff6e29b7f3a+2936554]
+	GetHandleVerifier [0x0x7ff6e29d8977+3070247]
+	GetHandleVerifier [0x0x7ff6e27183ce+185214]
+	GetHandleVerifier [0x0x7ff6e271fe1f+216527]
+	GetHandleVerifier [0x0x7ff6e2707b24+117460]
+	GetHandleVerifier [0x0x7ff6e2707cdf+117903]
+	GetHandleVerifier [0x0x7ff6e26edbb8+11112]
+	BaseThreadInitThunk [0x0x7ffc8d58e8d7+23]
+	RtlUserThreadStart [0x0x7ffc8f73bf6c+44]
+</msg>
+<arg>Welcome ${USERNAME}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="FAIL" start="2025-10-26T10:48:45.538880" elapsed="0.887167">UnexpectedAlertPresentException: Alert Text: Wrong password.
+Message: unexpected alert open: {Alert text : Wrong password.}
+  (Session info: chrome=141.0.7390.123)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6e26fe8e5+80021]
+	GetHandleVerifier [0x0x7ff6e26fe940+80112]
+	(No symbol) [0x0x7ff6e248060f]
+	(No symbol) [0x0x7ff6e252a131]
+	(No symbol) [0x0x7ff6e2501003]
+	(No symbol) [0x0x7ff6e24c95d1]
+	(No symbol) [0x0x7ff6e24ca3f3]
+	GetHandleVerifier [0x0x7ff6e29bdc7d+2960429]
+	GetHandleVerifier [0x0x7ff6e29b7f3a+2936554]
+	GetHandleVerifier [0x0x7ff6e29d8977+3070247]
+	GetHandleVerifier [0x0x7ff6e27183ce+185214]
+	GetHandleVerifier [0x0x7ff6e271fe1f+216527]
+	GetHandleVerifier [0x0x7ff6e2707b24+117460]
+	GetHandleVerifier [0x0x7ff6e2707cdf+117903]
+	GetHandleVerifier [0x0x7ff6e26edbb8+11112]
+	BaseThreadInitThunk [0x0x7ffc8d58e8d7+23]
+	RtlUserThreadStart [0x0x7ffc8f73bf6c+44]
+</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-26T10:48:46.427076" elapsed="2.131590"/>
+</kw>
+<status status="FAIL" start="2025-10-26T10:48:42.089558" elapsed="6.470523">UnexpectedAlertPresentException: Alert Text: Wrong password.
+Message: unexpected alert open: {Alert text : Wrong password.}
+  (Session info: chrome=141.0.7390.123)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6e26fe8e5+80021]
+	GetHandleVerifier [0x0x7ff6e26fe940+80112]
+	(No symbol) [0x0x7ff6e248060f]
+	(No symbol) [0x0x7ff6e252a131]
+	(No symbol) [0x0x7ff6e2501003]
+	(No symbol) [0x0x7ff6e24c95d1]
+	(No symbol) [0x0x7ff6e24ca3f3]
+	GetHandleVerifier [0x0x7ff6e29bdc7d+2960429]
+	GetHandleVerifier [0x0x7ff6e29b7f3a+2936554]
+	GetHandleVerifier [0x0x7ff6e29d8977+3070247]
+	GetHandleVerifier [0x0x7ff6e27183ce+185214]
+	GetHandleVerifier [0x0x7ff6e271fe1f+216527]
+	GetHandleVerifier [0x0x7ff6e2707b24+117460]
+	GetHandleVerifier [0x0x7ff6e2707cdf+117903]
+	GetHandleVerifier [0x0x7ff6e26edbb8+11112]
+	BaseThreadInitThunk [0x0x7ffc8d58e8d7+23]
+	RtlUserThreadStart [0x0x7ffc8f73bf6c+44]
+</status>
+</test>
+<status status="FAIL" start="2025-10-26T10:48:42.086537" elapsed="6.473544"/>
+</suite>
+<suite id="s1-s3" name="Logout Test" source="C:\Users\yasfir\Documents\GitHub\test-assignment2\tests\logout_test.robot">
+<test id="s1-s3-t1" name="Logout From DemoBlaze" line="6">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-26T10:48:48.568878" level="INFO">Opening browser 'chrome' to base url 'https://www.demoblaze.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-26T10:48:48.566538" elapsed="2.286482"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-26T10:48:50.854403" elapsed="0.089344"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-26T10:48:50.944789" level="INFO">Clicking element '//*[@id="login2"]'.</msg>
+<arg>//*[@id="login2"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-26T10:48:50.944789" elapsed="0.108750"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=loginusername</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-26T10:48:51.056452" elapsed="0.244209"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-26T10:48:51.301862" level="INFO">Typing text 'testuser123' into text field 'id=loginusername'.</msg>
+<arg>id=loginusername</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-26T10:48:51.301862" elapsed="0.258844"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-26T10:48:51.563968" level="INFO">Typing text 'pass123' into text field 'id=loginpassword'.</msg>
+<arg>id=loginpassword</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-26T10:48:51.562521" elapsed="0.196438"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-26T10:48:51.759957" level="INFO">Clicking button '//button[text()="Log in"]'.</msg>
+<arg>//button[text()="Log in"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-26T10:48:51.759957" elapsed="0.167028"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<msg time="2025-10-26T10:48:52.418539" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Alert Text: Wrong password.
+Message: unexpected alert open: {Alert text : Wrong password.}
+  (Session info: chrome=141.0.7390.123)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6e26fe8e5+80021]
+	GetHandleVerifier [0x0x7ff6e26fe940+80112]
+	(No symbol) [0x0x7ff6e248060f]
+	(No symbol) [0x0x7ff6e252a131]
+	(No symbol) [0x0x7ff6e2501003]
+	(No symbol) [0x0x7ff6e24c95d1]
+	(No symbol) [0x0x7ff6e24ca3f3]
+	GetHandleVerifier [0x0x7ff6e29bdc7d+2960429]
+	GetHandleVerifier [0x0x7ff6e29b7f3a+2936554]
+	GetHandleVerifier [0x0x7ff6e29d8977+3070247]
+	GetHandleVerifier [0x0x7ff6e27183ce+185214]
+	GetHandleVerifier [0x0x7ff6e271fe1f+216527]
+	GetHandleVerifier [0x0x7ff6e2707b24+117460]
+	GetHandleVerifier [0x0x7ff6e2707cdf+117903]
+	GetHandleVerifier [0x0x7ff6e26edbb8+11112]
+	BaseThreadInitThunk [0x0x7ffc8d58e8d7+23]
+	RtlUserThreadStart [0x0x7ffc8f73bf6c+44]
+</msg>
+<msg time="2025-10-26T10:48:52.435742" level="FAIL">UnexpectedAlertPresentException: Alert Text: Wrong password.
+Message: unexpected alert open: {Alert text : Wrong password.}
+  (Session info: chrome=141.0.7390.123)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6e26fe8e5+80021]
+	GetHandleVerifier [0x0x7ff6e26fe940+80112]
+	(No symbol) [0x0x7ff6e248060f]
+	(No symbol) [0x0x7ff6e2491477]
+	(No symbol) [0x0x7ff6e24983aa]
+	(No symbol) [0x0x7ff6e246c2be]
+	(No symbol) [0x0x7ff6e2490952]
+	(No symbol) [0x0x7ff6e2529566]
+	(No symbol) [0x0x7ff6e2501003]
+	(No symbol) [0x0x7ff6e24c95d1]
+	(No symbol) [0x0x7ff6e24ca3f3]
+	GetHandleVerifier [0x0x7ff6e29bdc7d+2960429]
+	GetHandleVerifier [0x0x7ff6e29b7f3a+2936554]
+	GetHandleVerifier [0x0x7ff6e29d8977+3070247]
+	GetHandleVerifier [0x0x7ff6e27183ce+185214]
+	GetHandleVerifier [0x0x7ff6e271fe1f+216527]
+	GetHandleVerifier [0x0x7ff6e2707b24+117460]
+	GetHandleVerifier [0x0x7ff6e2707cdf+117903]
+	GetHandleVerifier [0x0x7ff6e26edbb8+11112]
+	BaseThreadInitThunk [0x0x7ffc8d58e8d7+23]
+	RtlUserThreadStart [0x0x7ffc8f73bf6c+44]
+</msg>
+<arg>Welcome ${USERNAME}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="FAIL" start="2025-10-26T10:48:51.928476" elapsed="0.511464">UnexpectedAlertPresentException: Alert Text: Wrong password.
+Message: unexpected alert open: {Alert text : Wrong password.}
+  (Session info: chrome=141.0.7390.123)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6e26fe8e5+80021]
+	GetHandleVerifier [0x0x7ff6e26fe940+80112]
+	(No symbol) [0x0x7ff6e248060f]
+	(No symbol) [0x0x7ff6e2491477]
+	(No symbol) [0x0x7ff6e24983aa]
+	(No symbol) [0x0x7ff6e246c2be]
+	(No symbol) [0x0x7ff6e2490952]
+	(No symbol) [0x0x7ff6e2529566]
+	(No symbol) [0x0x7ff6e2501003]
+	(No symbol) [0x0x7ff6e24c95d1]
+	(No symbol) [0x0x7ff6e24ca3f3]
+	GetHandleVerifier [0x0x7ff6e29bdc7d+2960429]
+	GetHandleVerifier [0x0x7ff6e29b7f3a+2936554]
+	GetHandleVerifier [0x0x7ff6e29d8977+3070247]
+	GetHandleVerifier [0x0x7ff6e27183ce+185214]
+	GetHandleVerifier [0x0x7ff6e271fe1f+216527]
+	GetHandleVerifier [0x0x7ff6e2707b24+117460]
+	GetHandleVerifier [0x0x7ff6e2707cdf+117903]
+	GetHandleVerifier [0x0x7ff6e26edbb8+11112]
+	BaseThreadInitThunk [0x0x7ffc8d58e8d7+23]
+	RtlUserThreadStart [0x0x7ffc8f73bf6c+44]
+</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>//*[@id="logout2"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-26T10:48:52.442971" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id="login2"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-10-26T10:48:52.442971" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-26T10:48:52.445021" elapsed="2.145358"/>
+</kw>
+<status status="FAIL" start="2025-10-26T10:48:48.566538" elapsed="6.025429">UnexpectedAlertPresentException: Alert Text: Wrong password.
+Message: unexpected alert open: {Alert text : Wrong password.}
+  (Session info: chrome=141.0.7390.123)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6e26fe8e5+80021]
+	GetHandleVerifier [0x0x7ff6e26fe940+80112]
+	(No symbol) [0x0x7ff6e248060f]
+	(No symbol) [0x0x7ff6e2491477]
+	(No symbol) [0x0x7ff6e24983aa]
+	(No symbol) [0x0x7ff6e246c2be]
+	(No symbol) [0x0x7ff6e2490952]
+	(No symbol) [0x0x7ff6e2529566]
+	(No symbol) [0x0x7ff6e2501003]
+	(No symbol) [0x0x7ff6e24c95d1]
+	(No symbol) [0x0x7ff6e24ca3f3]
+	GetHandleVerifier [0x0x7ff6e29bdc7d+2960429]
+	GetHandleVerifier [0x0x7ff6e29b7f3a+2936554]
+	GetHandleVerifier [0x0x7ff6e29d8977+3070247]
+	GetHandleVerifier [0x0x7ff6e27183ce+185214]
+	GetHandleVerifier [0x0x7ff6e271fe1f+216527]
+	GetHandleVerifier [0x0x7ff6e2707b24+117460]
+	GetHandleVerifier [0x0x7ff6e2707cdf+117903]
+	GetHandleVerifier [0x0x7ff6e26edbb8+11112]
+	BaseThreadInitThunk [0x0x7ffc8d58e8d7+23]
+	RtlUserThreadStart [0x0x7ffc8f73bf6c+44]
+</status>
+</test>
+<status status="FAIL" start="2025-10-26T10:48:48.563360" elapsed="6.031177"/>
+</suite>
+<suite id="s1-s4" name="Signup Test" source="C:\Users\yasfir\Documents\GitHub\test-assignment2\tests\signup_test.robot">
+<test id="s1-s4-t1" name="Sign Up New User" line="6">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-26T10:48:54.616030" level="INFO">Opening browser 'chrome' to base url 'https://www.demoblaze.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-26T10:48:54.612276" elapsed="2.591682"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-26T10:48:57.203958" elapsed="0.054686"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-26T10:48:57.261639" level="INFO">Clicking element '//*[@id="signin2"]'.</msg>
+<arg>//*[@id="signin2"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-26T10:48:57.260640" elapsed="0.110325"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=sign-username</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-26T10:48:57.370965" elapsed="0.238768"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-26T10:48:57.612789" level="INFO">Typing text 'testuser123' into text field 'id=sign-username'.</msg>
+<arg>id=sign-username</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-26T10:48:57.609733" elapsed="0.247196"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-26T10:48:57.860227" level="INFO">Typing text 'pass123' into text field 'id=sign-password'.</msg>
+<arg>id=sign-password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-26T10:48:57.859227" elapsed="0.161662"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-26T10:48:58.022903" level="INFO">Clicking button '//button[text()="Sign up"]'.</msg>
+<arg>//button[text()="Sign up"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-26T10:48:58.020889" elapsed="0.173741"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-26T10:49:00.207124" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-26T10:48:58.194630" elapsed="2.012494"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2025-10-26T10:49:00.207124" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>accept</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2025-10-26T10:49:00.207124" elapsed="0.024197"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-26T10:49:00.232856" elapsed="2.179831"/>
+</kw>
+<status status="PASS" start="2025-10-26T10:48:54.612276" elapsed="7.801884"/>
+</test>
+<status status="PASS" start="2025-10-26T10:48:54.596621" elapsed="7.820187"/>
+</suite>
+<status status="FAIL" start="2025-10-26T10:48:29.976691" elapsed="32.443299"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="1" fail="3" skip="0">Tests</stat>
+<stat name="Buy Product Test" id="s1-s1" pass="0" fail="1" skip="0">Tests.Buy Product Test</stat>
+<stat name="Login Test" id="s1-s2" pass="0" fail="1" skip="0">Tests.Login Test</stat>
+<stat name="Logout Test" id="s1-s3" pass="0" fail="1" skip="0">Tests.Logout Test</stat>
+<stat name="Signup Test" id="s1-s4" pass="1" fail="0" skip="0">Tests.Signup Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-10-26T10:48:52.418539" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Alert Text: Wrong password.
+Message: unexpected alert open: {Alert text : Wrong password.}
+  (Session info: chrome=141.0.7390.123)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6e26fe8e5+80021]
+	GetHandleVerifier [0x0x7ff6e26fe940+80112]
+	(No symbol) [0x0x7ff6e248060f]
+	(No symbol) [0x0x7ff6e252a131]
+	(No symbol) [0x0x7ff6e2501003]
+	(No symbol) [0x0x7ff6e24c95d1]
+	(No symbol) [0x0x7ff6e24ca3f3]
+	GetHandleVerifier [0x0x7ff6e29bdc7d+2960429]
+	GetHandleVerifier [0x0x7ff6e29b7f3a+2936554]
+	GetHandleVerifier [0x0x7ff6e29d8977+3070247]
+	GetHandleVerifier [0x0x7ff6e27183ce+185214]
+	GetHandleVerifier [0x0x7ff6e271fe1f+216527]
+	GetHandleVerifier [0x0x7ff6e2707b24+117460]
+	GetHandleVerifier [0x0x7ff6e2707cdf+117903]
+	GetHandleVerifier [0x0x7ff6e26edbb8+11112]
+	BaseThreadInitThunk [0x0x7ffc8d58e8d7+23]
+	RtlUserThreadStart [0x0x7ffc8f73bf6c+44]
+</msg>
+</errors>
+</robot>
