@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.9.13 on win32)" generated="2025-11-25T18:21:14.722966" rpa="false" schemaversion="5">
+<suite id="s1" name="Test-Assignment2-Main" source="C:\Users\Yas\Desktop\test-assignment2-main">
+<suite id="s1-s1" name="Tests" source="C:\Users\Yas\Desktop\test-assignment2-main\tests">
+<suite id="s1-s1-s1" name="01Signup Test" source="C:\Users\Yas\Desktop\test-assignment2-main\tests\01signup_test.robot">
+<test id="s1-s1-s1-t1" name="Sign Up New User" line="8">
+<kw name="Generate Random String" owner="String">
+<msg time="2025-11-25T18:21:14.851088" level="INFO">${UNIQUE} = uzcues</msg>
+<var>${UNIQUE}</var>
+<arg>6</arg>
+<arg>[LOWER]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-11-25T18:21:14.851088" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-11-25T18:21:14.852165" level="INFO">${USERNAME} = user_uzcues</msg>
+<var>${USERNAME}</var>
+<arg>user_${UNIQUE}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-11-25T18:21:14.852165" elapsed="0.000000"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-11-25T18:21:14.852165" level="INFO">${USERNAME} = user_uzcues</msg>
+<arg>${USERNAME}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-11-25T18:21:14.852165" elapsed="0.000000"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-11-25T18:21:14.852165" level="INFO">${PASSWORD} = 123456</msg>
+<arg>${PASSWORD}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-11-25T18:21:14.852165" elapsed="0.000000"/>
+</kw>
+<kw name="Open BrowserStack Browser" owner="browserstack_keywords">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-11-25T18:21:14.853174" level="INFO">${caps} = {}</msg>
+<var>${caps}</var>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-11-25T18:21:14.853174" elapsed="0.000000"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${caps}</arg>
+<arg>browserName=${BROWSER}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-25T18:21:14.853174" elapsed="0.000000"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${caps}</arg>
+<arg>browserVersion=latest</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-25T18:21:14.853174" elapsed="0.000998"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${caps}</arg>
+<arg>sessionName=${NAME}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-25T18:21:14.854172" elapsed="0.000000"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${caps}</arg>
+<arg>buildName=Robot-Demoblaze</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-25T18:21:14.854172" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${BROWSER}'=='safari'</arg>
+<arg>Set Safari Caps</arg>
+<arg>${caps}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-11-25T18:21:14.854172" elapsed="0.000000"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-25T18:21:14.854172" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+<msg time="2025-11-25T18:21:14.855129" level="INFO">Opening browser 'firefox' to base url 'about:blank' through remote server at 'https://yasfirbekrozmeto_BiXeH4:sAWUwxqKMmno8zgsSaj3@hub-cloud.browserstack.com/wd/hub'.</msg>
+<msg time="2025-11-25T18:21:32.565402" level="INFO">C:\Users\Yas\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\remote_connection.py:419: UserWarning: Embedding username and password in URL could be insecure, use ClientConfig instead
+  headers = self.get_remote_connection_headers(parsed_url, self._client_config.keep_alive)</msg>
+<arg>about:blank</arg>
+<arg>remote_url=${REMOTE}</arg>
+<arg>desired_capabilities=${caps}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-25T18:21:14.854172" elapsed="17.711230"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-25T18:21:32.566389" elapsed="0.427359"/>
+</kw>
+<arg>${BROWSER}</arg>
+<arg>${TEST_NAME}</arg>
+<status status="PASS" start="2025-11-25T18:21:14.853174" elapsed="18.140574"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-11-25T18:21:32.994753" level="INFO">Opening url 'https://www.demoblaze.com/'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-11-25T18:21:32.994753" elapsed="1.205122"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-25T18:21:34.199875" elapsed="0.252646"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-25T18:21:34.452521" level="INFO">Clicking element '//*[@id="signin2"]'.</msg>
+<arg>//*[@id="signin2"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-25T18:21:34.452521" elapsed="0.483996"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=sign-username</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-25T18:21:34.936517" elapsed="0.358434"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-25T18:21:35.295967" level="INFO">Typing text 'user_uzcues' into text field 'id=sign-username'.</msg>
+<arg>id=sign-username</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-25T18:21:35.294951" elapsed="0.440792"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-25T18:21:35.736746" level="INFO">Typing text '123456' into text field 'id=sign-password'.</msg>
+<arg>id=sign-password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-25T18:21:35.735743" elapsed="0.418122"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-11-25T18:21:36.153865" level="INFO">Clicking button '//button[text()="Sign up"]'.</msg>
+<arg>//button[text()="Sign up"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-25T18:21:36.153865" elapsed="1.008166"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-25T18:21:39.176429" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-25T18:21:37.163048" elapsed="2.013381"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2025-11-25T18:21:39.177414" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>accept</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2025-11-25T18:21:39.177414" elapsed="0.348419"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-11-25T18:21:39.526835" elapsed="1.230666"/>
+</kw>
+<status status="PASS" start="2025-11-25T18:21:14.850045" elapsed="25.908429"/>
+</test>
+<status status="PASS" start="2025-11-25T18:21:14.738283" elapsed="26.021191"/>
+</suite>
+<suite id="s1-s1-s2" name="02Login Test" source="C:\Users\Yas\Desktop\test-assignment2-main\tests\02login_test.robot">
+<test id="s1-s1-s2-t1" name="Login To DemoBlaze" line="7">
+<kw name="Open BrowserStack Browser" owner="browserstack_keywords">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-11-25T18:21:40.767487" level="INFO">${caps} = {}</msg>
+<var>${caps}</var>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-11-25T18:21:40.767487" elapsed="0.000000"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${caps}</arg>
+<arg>browserName=${BROWSER}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-25T18:21:40.768487" elapsed="0.000000"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${caps}</arg>
+<arg>browserVersion=latest</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-25T18:21:40.768487" elapsed="0.000000"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${caps}</arg>
+<arg>sessionName=${NAME}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-25T18:21:40.768487" elapsed="0.000000"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${caps}</arg>
+<arg>buildName=Robot-Demoblaze</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-25T18:21:40.768487" elapsed="0.001008"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${BROWSER}'=='safari'</arg>
+<arg>Set Safari Caps</arg>
+<arg>${caps}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-11-25T18:21:40.769495" elapsed="0.001982"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-25T18:21:40.771477" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+<msg time="2025-11-25T18:21:40.772476" level="INFO">Opening browser 'firefox' to base url 'about:blank' through remote server at 'https://yasfirbekrozmeto_BiXeH4:sAWUwxqKMmno8zgsSaj3@hub-cloud.browserstack.com/wd/hub'.</msg>
+<msg time="2025-11-25T18:21:51.145196" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<arg>about:blank</arg>
+<arg>remote_url=${REMOTE}</arg>
+<arg>desired_capabilities=${caps}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2025-11-25T18:21:40.771477" elapsed="10.373719">Execution terminated by signal</status>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2025-11-25T18:21:51.145196" elapsed="0.000000"/>
+</kw>
+<arg>${BROWSER}</arg>
+<arg>${TEST_NAME}</arg>
+<status status="FAIL" start="2025-11-25T18:21:40.767487" elapsed="10.377709">Execution terminated by signal</status>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2025-11-25T18:21:51.145196" elapsed="0.000000"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2025-11-25T18:21:51.146190" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>id=login2</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-25T18:21:51.146361" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=loginusername</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-11-25T18:21:51.146361" elapsed="0.000000"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>id=loginusername</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-25T18:21:51.146361" elapsed="0.000000"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>id=loginpassword</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-25T18:21:51.146361" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=loginusername</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-25T18:21:51.146361" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=loginpassword</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-25T18:21:51.146361" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-11-25T18:21:51.146361" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>//button[text()="Log in"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-25T18:21:51.147248" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Does Not Contain" owner="SeleniumLibrary">
+<arg>//*[@id="logInModalLabel"]</arg>
+<arg>Log in</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` does not contain ``text``.</doc>
+<status status="NOT RUN" start="2025-11-25T18:21:51.147248" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Welcome ${USERNAME}</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-11-25T18:21:51.147248" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-11-25T18:21:40.766491" elapsed="10.380757">Execution terminated by signal</status>
+</test>
+<status status="FAIL" start="2025-11-25T18:21:40.760473" elapsed="10.386775"/>
+</suite>
+<suite id="s1-s1-s3" name="03Buy Product Test" source="C:\Users\Yas\Desktop\test-assignment2-main\tests\03buy_product_test.robot">
+<test id="s1-s1-s3-t1" name="Buy Product Successfully" line="7">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-11-25T18:21:51.148255" elapsed="0.000998">Test execution stopped due to a fatal error.</status>
+</test>
+<status status="FAIL" start="2025-11-25T18:21:51.148255" elapsed="0.000998"/>
+</suite>
+<suite id="s1-s1-s4" name="04Logout Test" source="C:\Users\Yas\Desktop\test-assignment2-main\tests\04logout_test.robot">
+<test id="s1-s1-s4-t1" name="Logout From DemoBlaze" line="7">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-11-25T18:21:51.150252" elapsed="0.000000">Test execution stopped due to a fatal error.</status>
+</test>
+<status status="FAIL" start="2025-11-25T18:21:51.149253" elapsed="0.000999"/>
+</suite>
+<status status="FAIL" start="2025-11-25T18:21:14.735967" elapsed="36.415295"/>
+</suite>
+<status status="FAIL" start="2025-11-25T18:21:14.723967" elapsed="36.427295"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat info="combined" combined="NOT robot:exit" pass="1" fail="1" skip="0">NOT robot:exit</stat>
+</tag>
+<suite>
+<stat name="Test-Assignment2-Main" id="s1" pass="1" fail="3" skip="0">Test-Assignment2-Main</stat>
+<stat name="Tests" id="s1-s1" pass="1" fail="3" skip="0">Test-Assignment2-Main.Tests</stat>
+<stat name="01Signup Test" id="s1-s1-s1" pass="1" fail="0" skip="0">Test-Assignment2-Main.Tests.01Signup Test</stat>
+<stat name="02Login Test" id="s1-s1-s2" pass="0" fail="1" skip="0">Test-Assignment2-Main.Tests.02Login Test</stat>
+<stat name="03Buy Product Test" id="s1-s1-s3" pass="0" fail="1" skip="0">Test-Assignment2-Main.Tests.03Buy Product Test</stat>
+<stat name="04Logout Test" id="s1-s1-s4" pass="0" fail="1" skip="0">Test-Assignment2-Main.Tests.04Logout Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-11-25T18:21:14.854172" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+<msg time="2025-11-25T18:21:40.771477" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+</errors>
+</robot>
